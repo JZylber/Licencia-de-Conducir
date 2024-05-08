@@ -11,7 +11,7 @@ Sede = dict[str, str]
 # }
 
 def cargar_csv(nombreArchivo: str) -> list[list[str]]:
-    with open(nombreArchivo) as archivo:
+    with open(nombreArchivo, encoding="utf8") as archivo:
         lector = csv.reader(archivo)
         datos = []
         lector.__next__()
